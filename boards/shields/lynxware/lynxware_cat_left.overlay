@@ -28,6 +28,6 @@
         ;
 };
 
-&trackball_split {
+&mouse_split {
     status = "disabled";
 };

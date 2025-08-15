@@ -1,6 +1,6 @@
 ---
 file_format: 1
-id: lynxware-cat
+id: lynxware_cat
 name: Lynxware Cat
 type: shield
 url: https://github.com/Cuttlerat/zmk-config-lynxware-cat
