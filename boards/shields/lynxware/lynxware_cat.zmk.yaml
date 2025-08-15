@@ -1,0 +1,8 @@
+---
+file_format: 1
+id: lynxware-cat
+name: Lynxware Cat
+type: shield
+url: https://github.com/Cuttlerat/zmk-config-lynxware-cat
+requires: 
+  - pro_micro

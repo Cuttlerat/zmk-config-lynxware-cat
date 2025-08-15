@@ -1,0 +1,13 @@
+if SHIELD_LYNXWARE_CAT_RIGHT
+    config SPI
+        default y
+    config ZMK_POINTING
+        default y
+endif
+
+if SHIELD_LYNXWARE_CAT_DONGLE
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+    config ZMK_POINTING
+        default y
+endif

@@ -1,0 +1,48 @@
+#include "lynxware_cat.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    chosen {
+        zmk,split-role = "central";
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_1 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+
+    input_processors {
+        x_blocker: x_blocker {
+            compatible = "zmk,input-processor-code-mapper";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_REL>;
+            map = <INPUT_REL_X INPUT_REL_MISC>;
+        };
+        
+        vertical_scroll_only_mapper: vertical_scroll_only_mapper {
+            compatible = "zmk,input-processor-code-mapper";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_REL>;
+            map = <INPUT_REL_Y INPUT_REL_WHEEL>;
+        };
+    };
+};
+
+&kscan0 {
+    status = "disabled";
+};
+
+&trackball_listener {
+    status = "okay";
+    input-processors = <&zip_temp_layer 4 2000 &zip_xy_scaler 2 3>;
+
+    scroll_layer {
+        layers = <5>;
+        input-processors = <&x_blocker &vertical_scroll_only_mapper &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT &zip_scroll_scaler 1 4>;
+    };
+};
