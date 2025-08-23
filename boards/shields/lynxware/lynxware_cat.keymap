@@ -13,37 +13,16 @@
 
         default_layer {
             bindings = <
-                &kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
-                &kp LCTRL  &kp A      &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-                &kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp ESC
-                                                &kp LGUI  &mo LOWER &kp SPACE &kp RET   &mo RAISE &kp RALT
-            >;
-        };
+                            &kp Q   &kp W   &kp E                              &kp U   &kp I   &kp O
+                    &kp A   &kp S   &kp D   &kp F   &kp G              &kp H   &kp J   &kp K   &kp L   &kp SEMI
+            &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N              &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS  &kp EQUAL
+            &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6             &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 
-        lower_layer {
-            bindings = <
-                &kp TAB    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-                &kp LCTRL  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp PIPE
-                &kp LSHFT  &kp EQUAL  &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp GRAVE &kp BSLH  &kp TILDE &kp ESC
-                                                &kp LGUI  &trans    &kp SPACE &kp RET   &mo ADJUST &kp RALT
-            >;
-        };
-
-        raise_layer {
-            bindings = <
-                &kp TAB    &kp F1     &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp BSPC
-                &kp LCTRL  &kp F11    &kp F12   &kp HOME  &kp END   &kp PG_UP &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none     &none
-                &kp LSHFT  &none      &none     &none     &none     &kp PG_DN &kp INS   &kp DEL   &kp CAPS  &kp PSCRN &kp SLCK  &kp ESC
-                                                &kp LGUI  &mo ADJUST &kp SPACE &kp RET   &trans    &kp RALT
-            >;
-        };
-
-        adjust_layer {
-            bindings = <
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &none &none &none &none &none
-                &none      &none      &none     &none     &none     &none     &none     &none     &none     &none     &none     &none
-                &none      &none      &none     &none     &none     &none     &none     &none     &none     &none     &none     &bootloader
-                                                &kp LGUI  &trans    &kp SPACE &kp RET   &trans    &kp RALT
+                                    &kp LGUI   &kp SPACE                      &kp RET    &kp RALT
+                                         &kp LCTRL  &kp ESC                &kp ENTER  &kp RCTRL
+                                    &kp LSHFT  &kp TAB   &kp GRAVE     &kp CAPSLOCK  &kp DEL  &kp RSHFT
+                                         &kp HOME   &kp END                &kp PG_UP   &kp PG_DN
+                                    &kp LEFT   &kp DOWN                      &kp UP     &kp RIGHT
             >;
         };
     };
