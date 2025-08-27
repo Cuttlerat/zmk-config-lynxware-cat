@@ -18,14 +18,14 @@
 
         default_layer {
             bindings = <
-                      &kp W         &kp E      &kp BACKSPACE                                                    &mkp LCLK  &kp I      &kp O
-           &kp Q      &kp S         &kp D      &kp R          &kp T                                      &kp Y  &kp U      &kp K      &kp L     &kp P
-&kp LSHFT  &kp A      &kp X         &kp C      &kp F          &kp G                                      &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z      &kp LEFT_WIN  &kp LALT   &kp V          &kp B                                      &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &kp DEL
-&kp LCTRL  &kp LSHFT  &kp UP        &kp RIGHT
-&kp LALT   &kp LGUI   &kp LEFT      &kp DOWN
-&kp DEL    &kp BSPC   &kp RET       &mkp LCLK  &mkp RCLK      &mkp MCLK
-&none      &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &none      &msc SCRL_UP  &msc SCRL_DOWN
+                          &kp W         &kp E      &kp BACKSPACE                                                     &mkp LCLK  &kp I      &kp O
+               &kp Q      &kp S         &kp D      &kp R          &kp T                                       &kp Y  &kp U      &kp K      &kp L     &kp P
+&kp LSHFT      &kp A      &kp X         &kp C      &kp F          &kp G                                       &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
+&kp LCTRL      &kp Z      &kp LEFT_WIN  &kp LALT   &kp V          &kp B                                       &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &kp DEL
+&kp LCTRL      &kp LSHFT  &kp UP        &kp RIGHT
+&kp LALT       &kp LGUI   &kp LEFT      &kp DOWN
+&kp BACKSPACE  &kp SPACE  &kp RET       &mkp MCLK  &mkp RCLK      &kp DELETE
+&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &msc SCRL_UP  &msc SCRL_DOWN
             >;
         };
 
