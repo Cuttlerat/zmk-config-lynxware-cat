@@ -8,8 +8,8 @@
 &msc {
     /* Faster scroll on hold for &msc SCRL_UP/DOWN */
     delay-ms = <0>;
-    time-to-max-speed-ms = <600>;
-    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <40>;
+    acceleration-exponent = <1>;
 };
 
 &mt {
