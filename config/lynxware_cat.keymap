@@ -5,6 +5,13 @@
 
 &soft_off { hold-time-ms = <3000>; };
 
+&msc {
+    /* Faster scroll on hold for &msc SCRL_UP/DOWN */
+    delay-ms = <0>;
+    time-to-max-speed-ms = <600>;
+    acceleration-exponent = <0>;
+};
+
 &mt {
     flavor = "balanced";
     require-prior-idle-ms = <200>;
