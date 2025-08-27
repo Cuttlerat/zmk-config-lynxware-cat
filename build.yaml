@@ -22,14 +22,14 @@ include:
   - board: nice_nano_v2
     shield: lynxware_cat_left
     artifact-name: lynxware_cat_left
-    # snippet: zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: lynxware_cat_right
     artifact-name: lynxware_cat_right
-    # snippet: zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: lynxware_cat_dongle
     artifact-name: lynxware_cat_dongle
-    # snippet: zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
