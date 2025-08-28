@@ -30,6 +30,15 @@
             type = <INPUT_EV_REL>;
             map = <INPUT_REL_Y INPUT_REL_WHEEL>;
         };
+
+        mute_motion: mute_motion {
+            compatible = "zmk,input-processor-code-mapper";
+            #input-processor-cells = <0>;
+            status = "disabled";
+            type = <INPUT_EV_REL>;
+            map = <INPUT_REL_X INPUT_REL_MISC
+                   INPUT_REL_Y INPUT_REL_MISC>;
+        };
     };
 };
 
@@ -39,5 +48,5 @@
 
 &mouse_listener {
     status = "okay";
-    input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT &zip_xy_scaler 1 1>;
+    input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT &zip_xy_scaler 1 1 &mute_motion>;
 };
