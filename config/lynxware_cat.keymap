@@ -69,4 +69,5 @@
 &trans  &trans  &kp N2  &kp N7  &trans     &trans     &kp N1  &kp N6
             >;
         };
+    };
 };
