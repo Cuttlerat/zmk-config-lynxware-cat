@@ -14,6 +14,21 @@
 };
 
 / {
+    behaviors {
+        sutd: scroll_up_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&msc MOVE_Y(150)>, <&msc MOVE_Y(450)>;
+        };
+        sdtd: scroll_down_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&msc MOVE_Y(-150)>, <&msc MOVE_Y(-450)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,7 +41,7 @@
 &kp LCTRL      &kp LSHFT  &kp UP        &kp RIGHT
 &kp LALT       &kp LGUI   &kp LEFT      &kp DOWN
 &kp BACKSPACE  &kp SPACE  &kp RET       &mkp MCLK  &mkp RCLK      &kp DELETE
-&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &msc MOVE_Y(150)  &msc MOVE_Y(-150)
+&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &sutd  &sdtd
             >;
         };
 
