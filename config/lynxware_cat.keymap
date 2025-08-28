@@ -36,6 +36,7 @@
         mute_motion_hold: mute_motion_hold {
             compatible = "zmk,behavior-input-processor-hold";
             label = "MUTE_MOTION_HOLD";
+            #binding-cells = <0>;
             processor = <&mute_motion>;
         };
     };
