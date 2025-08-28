@@ -13,19 +13,25 @@
     quick-tap-ms = <175>;
 };
 
+&msc {
+  delay-ms = <0>;
+  time-to-max-speed-ms = <40>;
+  acceleration-exponent = <1>;
+};
+
+&sl {
+    release-after-ms = <2000>;
+};
+
 / {
     behaviors {
-        sutd: scroll_up_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+        scrl: scroll_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&msc MOVE_Y(150)>, <&msc MOVE_Y(450)>;
-        };
-        sdtd: scroll_down_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&msc MOVE_Y(-150)>, <&msc MOVE_Y(-450)>;
+            bindings = <&msc>, <&sl>;
+            display-name = "Mod-Tap";
         };
     };
 
@@ -41,7 +47,7 @@
 &kp LCTRL      &kp LSHFT  &kp UP        &kp RIGHT
 &kp LALT       &kp LGUI   &kp LEFT      &kp DOWN
 &kp BACKSPACE  &kp SPACE  &kp RET       &mkp MCLK  &mkp RCLK      &kp DELETE
-&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &sutd  &sdtd
+&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &scrl MOVE_Y(150) 2 &scrl MOVE_Y(-150) 2
             >;
         };
 
@@ -57,5 +63,18 @@
 &trans  &trans  &kp N2  &kp N7  &trans     &trans     &kp N1  &kp N6
             >;
         };
+
+        scroll {
+            bindings = <
+                &trans  &trans  &trans                                       &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans     &msc MOVE_Y(450)  &msc MOVE_Y(-450)
+            >;
+        }; 
     };
 };
