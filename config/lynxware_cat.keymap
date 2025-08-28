@@ -20,28 +20,7 @@
   acceleration-exponent = <1>;
 };
 
-&sl {
-    release-after-ms = <200>;
-};
-
 / {
-    behaviors {
-        scu: scroll_up_mod_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SCROLL_UP_MORPH";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&msc MOVE_Y(150)>, <&msc MOVE_Y(450)>;
-        };
-        scd: scroll_down_mod_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SCROLL_DOWN_MORPH";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&msc MOVE_Y(-150)>, <&msc MOVE_Y(-450)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,7 +33,7 @@
 &kp LCTRL      &kp LSHFT  &kp UP        &kp RIGHT
 &kp LALT       &kp LGUI   &kp LEFT      &kp DOWN
 &kp BACKSPACE  &kp SPACE  &kp RET       &mkp MCLK  &mkp RCLK      &kp DELETE
-&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &scu                 &scd
+&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &msc MOVE_Y(250)   &msc MOVE_Y(-250)
             >;
         };
 
