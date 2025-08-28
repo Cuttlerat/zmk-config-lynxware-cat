@@ -1,9 +1,9 @@
 #include <behaviors/mouse_key_toggle.dtsi>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/modifiers.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/modifiers.h>
 
 &soft_off { hold-time-ms = <3000>; };
 
@@ -15,9 +15,9 @@
 };
 
 &msc {
-  delay-ms = <0>;
-  time-to-max-speed-ms = <40>;
-  acceleration-exponent = <1>;
+    delay-ms = <0>;
+    time-to-max-speed-ms = <40>;
+    acceleration-exponent = <1>;
 };
 
 / {
@@ -26,14 +26,27 @@
 
         default_layer {
             bindings = <
-                          &kp W         &kp E      &kp BACKSPACE                                                     &mkp LCLK  &kp I      &kp O
-               &kp Q      &kp S         &kp D      &kp R          &kp T                                       &kp Y  &kp U      &kp K      &kp L     &kp P
-&kp LSHFT      &kp A      &kp X         &kp C      &kp F          &kp G                                       &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
-&kp LCTRL      &kp Z      &kp LEFT_WIN  &kp LALT   &kp V          &kp B                                       &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &kp DEL
-&kp LCTRL      &kp LSHFT  &kp UP        &kp RIGHT
-&kp LALT       &kp LGUI   &kp LEFT      &kp DOWN
-&kp BACKSPACE  &kp SPACE  &kp RET       &mkp MCLK  &mkp RCLK      &kp DELETE
-&kp ESCAPE     &kp SPACE  &kp SPACE     &kp PG_DN  &mo 1          &kp TAB     &msc MOVE_Y(250)   &msc MOVE_Y(-250)
+                              &kp W      &kp E         &kp R                                                               &mkp LCLK  &kp I      &kp O
+                &kp Q         &kp S      &kp D         &kp F      &kp T                                             &kp Y  &kp U      &kp K      &kp L     &kp P
+&kp LSHFT       &kp A         &kp X      &kp C         &kp V      &kp G                                             &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z         &none      &kp LEFT_ALT  &none      &kp B                                             &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &tog 1
+&kp LCTRL       &kp LEFT_ALT  &kp UP     &kp RIGHT
+&kp LEFT_SHIFT  &kp LGUI      &kp LEFT   &kp DOWN
+&kp BACKSPACE   &kp SPACE     &kp RET    &mkp LCLK     &mkp RCLK  &mkp MCLK
+&kp ESCAPE      &kp SPACE     &kp SPACE  &kp DELETE    &mo 2      &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
+            >;
+        };
+
+        gaming {
+            bindings = <
+                         &kp Q   &kp W   &kp E                                     &trans  &trans  &trans
+              &kp TAB    &kp A   &kp S   &kp D   &kp R                     &trans  &trans  &trans  &trans  &trans
+&kp ESC       &kp LSHFT  &kp Z   &kp X   &kp C   &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_ALT  &kp LCTRL  &kp T   &kp G   &kp B   &kp V                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans     &trans  &trans
+&trans        &none      &trans  &trans
+&trans        &trans     &trans  &trans  &trans  &trans
+&trans        &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
