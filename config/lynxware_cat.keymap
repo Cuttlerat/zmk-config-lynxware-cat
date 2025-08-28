@@ -34,7 +34,7 @@
 &kp LCTRL       &kp LEFT_ALT  &kp UP     &kp RIGHT
 &kp LEFT_SHIFT  &kp LGUI      &kp LEFT   &kp DOWN
 &kp BACKSPACE   &kp SPACE     &kp RET    &mkp LCLK     &mkp RCLK  &mkp MCLK
-&kp ESCAPE      &kp SPACE     &kp PG_DN  &kp DELETE    &mo 2      &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
+&kp ESCAPE      &kp SPACE     &mo 3      &kp DELETE    &mo 2      &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
             >;
         };
 
@@ -61,6 +61,18 @@
 &trans  &trans  &kp N4  &kp N9
 &trans  &trans  &trans  &kp N3  &kp N8     &kp MINUS
 &trans  &trans  &kp N2  &kp N7  &trans     &trans     &kp N1  &kp N6
+            >;
+        };
+        clutch {
+            bindings = <
+                &trans  &trans  &trans                                       &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans
             >;
         };
     };
