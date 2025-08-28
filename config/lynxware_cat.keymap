@@ -22,24 +22,6 @@
 };
 
 / {
-    input_processors {
-        mute_motion: mute_motion {
-            compatible = "zmk,input-processor-code-mapper";
-            #input-processor-cells = <0>;
-            status = "disabled";
-            type = <INPUT_EV_REL>;
-            map = <INPUT_REL_X INPUT_REL_MISC
-                   INPUT_REL_Y INPUT_REL_MISC>;
-        };
-    };
-    behaviors {
-        mute_motion_hold: mute_motion_hold {
-            compatible = "zmk,behavior-input-processor-hold";
-            label = "MUTE_MOTION_HOLD";
-            #binding-cells = <0>;
-            processor = <&mute_motion>;
-        };
-    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,7 +34,7 @@
 &kp LCTRL       &kp LEFT_ALT  &kp UP     &kp RIGHT
 &kp LEFT_SHIFT  &kp LGUI      &kp LEFT   &kp DOWN
 &kp BACKSPACE   &kp SPACE     &kp RET    &mkp LCLK     &mkp RCLK  &mkp MCLK
-&kp ESCAPE      &kp SPACE     &mute_motion_hold  &kp DELETE    &mo 2      &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
+&kp ESCAPE      &kp SPACE     &kp PG_DN  &kp DELETE    &mo 2      &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
             >;
         };
 
