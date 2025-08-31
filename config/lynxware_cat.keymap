@@ -27,14 +27,14 @@
 
         default_layer {
             bindings = <
-                              &kp W            &kp E         &kp R                                                                      &mkp LCLK  &kp I      &kp O
-                &kp Q         &kp S            &kp D         &kp F             &kp T                                             &kp Y  &kp U      &kp K      &kp L     &kp P
-&kp LSHFT       &kp A         &kp X            &kp C         &kp V             &kp G                                             &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z         &kp PRINTSCREEN  &kp LEFT_ALT  &kp LS(LEFT_ALT)  &kp B                                             &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &tog 1
+                              &kp W            &kp E         &kp R                                                                &mkp LCLK  &kp I      &kp O
+                &kp Q         &kp S            &kp D         &kp F       &kp T                                             &kp Y  &kp U      &kp K      &kp L     &kp P
+&kp LSHFT       &kp A         &kp X            &kp C         &kp V       &kp G                                             &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z         &kp PRINTSCREEN  &kp LEFT_ALT  &none       &kp B                                             &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &tog 1
 &kp LCTRL       &kp LEFT_ALT  &kp UP           &kp RIGHT
 &kp LEFT_SHIFT  &kp LGUI      &kp LEFT         &kp DOWN
-&kp BACKSPACE   &kp SPACE     &kp DELETE       &mkp LCLK     &mkp RCLK         &mkp MCLK
-&mo 2           &kp ENTER     &mo 3            &mo 2         &kp ESCAPE        &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
+&kp BACKSPACE   &kp SPACE     &kp DELETE       &mkp LCLK     &mkp RCLK   &mkp MCLK
+&mo 2           &kp ENTER     &mo 3            &mo 2         &kp ESCAPE  &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
             >;
         };
 
