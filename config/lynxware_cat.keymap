@@ -30,10 +30,10 @@
                               &kp W            &kp E         &kp R                                                                &mkp LCLK  &kp I      &kp O
                 &kp Q         &kp S            &kp D         &kp F       &kp T                                             &kp Y  &kp U      &kp K      &kp L     &kp P
 &kp LSHFT       &kp A         &kp X            &kp C         &kp V       &kp G                                             &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z         &kp PRINTSCREEN  &kp LEFT_ALT  &none       &kp B                                             &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &tog 1
+&kp LCTRL       &kp Z         &kp PRINTSCREEN  &kp LEFT_ALT  &none       &kp B                                             &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &kp BACKSLASH
 &kp LCTRL       &kp LEFT_ALT  &kp UP           &kp RIGHT
 &kp LEFT_SHIFT  &kp LGUI      &kp LEFT         &kp DOWN
-&kp BACKSPACE   &kp SPACE     &kp DELETE       &mkp LCLK     &mkp RCLK   &mkp MCLK
+&kp BACKSPACE   &kp SPACE     &kp DELETE       &kp SPACE     &mkp RCLK   &mkp MCLK
 &mo 2           &kp ENTER     &mo 3            &mo 2         &kp ESCAPE  &kp TAB    &msc MOVE_Y(250)  &msc MOVE_Y(-250)
             >;
         };
@@ -56,7 +56,7 @@
                  &trans  &trans  &kp EQUAL                                           &trans  &trans  &trans
          &trans  &trans  &trans  &trans     &kp TILDE                        &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans     &kp BACKSLASH                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans     &kp F12                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans     &kp F12                          &trans  &trans  &trans  &trans  &trans  &tog 1
 &kp F10  &kp F5  &kp N5  &kp N0
 &kp F9   &kp F4  &kp N4  &kp N9
 &kp F11  &kp F8  &kp F3  &kp N3  &kp N8     &kp MINUS
