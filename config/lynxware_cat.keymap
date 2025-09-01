@@ -32,7 +32,7 @@
 &kp LSHFT       &kp A          &kp X            &kp C             &kp V       &kp G                           &kp H  &kp J      &kp COMMA  &kp DOT   &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z          &none            &none             &none       &kp B                           &kp N  &kp M      &kp LBKT   &kp RBKT  &kp FSLH  &kp BACKSLASH
 &kp LCTRL       &kp LEFT_ALT   &kp ENTER        &mo 2
-&kp LEFT_SHIFT  &kp LGUI       &msc MOVE_Y(20)  &msc MOVE_Y(-20)
+&kp LEFT_SHIFT  &kp LGUI       &msc MOVE_Y(250)  &msc MOVE_Y(-250)
 &kp DELETE      &kp BACKSPACE  &kp SPACE        &mkp RCLK         &mkp MCLK   &none
 &mo 2           &kp BACKSPACE  &kp UP           &kp DOWN          &kp ESCAPE  &kp TAB  &kp LEFT  &kp RIGHT
             >;
