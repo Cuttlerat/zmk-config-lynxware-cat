@@ -34,7 +34,7 @@
 &kp LCTRL       &kp LEFT_ALT   &kp UP     &kp RIGHT
 &kp LEFT_SHIFT  &kp LGUI       &kp LEFT   &kp DOWN
 &kp DELETE      &kp BACKSPACE  &kp SPACE  &mkp RCLK  &mkp MCLK   &none
-&mo 2           &kp ENTER      &none      &mo 2      &kp ESCAPE  &kp TAB  &msc MOVE_Y(250)  &msc MOVE_Y(-250)
+&mo 2           &kp BACKSPACE  &kp ENTER  &mo 2      &kp ESCAPE  &kp TAB  &msc MOVE_Y(250)  &msc MOVE_Y(-250)
             >;
         };
 
