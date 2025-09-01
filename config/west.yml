@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: cuttlerat
-      url-base: https://github.com/Cuttlerat
     - name: nrfconnect
       url-base: https://github.com/nrfconnect
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -22,7 +20,7 @@ manifest:
       remote: badjeff
       revision: main
     - name: zmk-feature-split-esb
-      remote: cuttlerat
+      remote: badjeff
       revision: main  
     - name: sdk-nrf
       remote: nrfconnect
