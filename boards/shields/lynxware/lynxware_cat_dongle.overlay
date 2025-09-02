@@ -51,8 +51,9 @@
     pinctrl-names = "default", "sleep";
 
     ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb-i2c";
+        compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
+        status = "okay";
         width = <128>;
         height = <32>;
         multiplex-ratio = <31>;
