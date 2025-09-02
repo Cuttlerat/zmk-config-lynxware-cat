@@ -7,7 +7,6 @@
     chosen {
         zmk,split-role = "central";
         zmk,kscan = &mock_kscan;
-        zephyr,display = &ssd1306;
     };
 
     mock_kscan: kscan_1 {
@@ -25,41 +24,4 @@
 &mouse_listener {
     status = "okay";
     input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT &zip_xy_scaler 1 1>;
-};
-
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 6)>;
-        };
-    };
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 6)>;
-            low-power-enable;
-        };
-    };
-};
-
-&i2c0 {
-    status = "okay";
-
-    ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        status = "okay";
-        width = <128>;
-        height = <32>;
-        multiplex-ratio = <31>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        segment-remap;
-        com-invdir;
-        com-sequential;
-        inversion-on;
-        prechargep = <0x22>;
-    };
 };
