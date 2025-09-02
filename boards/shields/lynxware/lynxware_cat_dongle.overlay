@@ -45,7 +45,7 @@
 
 &i2c0 {
     status = "okay";
-    
+
     ssd1306: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
@@ -59,6 +59,7 @@
         segment-remap;
         com-invdir;
         com-sequential;
+        inversion-on;
         prechargep = <0x22>;
     };
 };
