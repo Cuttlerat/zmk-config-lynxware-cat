@@ -62,5 +62,6 @@
         display-offset = <0>;
         segment-remap;
         com-invdir;
+        prechargep = <0x22>;
     };
 };
