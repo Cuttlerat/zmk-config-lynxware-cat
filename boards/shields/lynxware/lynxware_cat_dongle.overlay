@@ -64,7 +64,6 @@
         segment-remap;
         com-invdir;
         com-sequential;
-        dc-dc-enable;
         prechargep = <0x22>;
     };
 };
